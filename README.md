@@ -1,5 +1,18 @@
 # gym.cartpole-v0
-solved using:
+
+#### Project Structure:
+solved model (saved) using tensorflow: 200.model
+
+main routine: experiment.ipynb
+
+random initialization data: g50.txt
+
+agent: learner.py
+
+helper functions: util.py
+
+
+#### solved using:
 * reinforcement learning algorithm: approximate policy iteration
 * deep neural network: input(4)-dense(128)-drop(0.8)-dense(256)-drop(0.8)-dense(512)-drop(0.8)-dense(256)-drop(0.8)-dense(128)-softmax(2), opt=adam, lr=1e-3
 
