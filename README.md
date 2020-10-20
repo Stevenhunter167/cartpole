@@ -1,5 +1,7 @@
 # gym.cartpole-v0
-solved using approximate policy iteration
+solved using:
+* reinforcement learning algorithm: approximate policy iteration
+* deep neural network: input(4)-dense(128)-drop(0.8)-dense(256)-drop(0.8)-dense(512)-drop(0.8)-dense(256)-drop(0.8)-dense(128)-softmax(2), opt=adam, lr=1e-3
 
 ```python
 # core algorithm: policy iteration (src: /experiment.ipynb)
