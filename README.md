@@ -8,7 +8,7 @@ DQN: deep Q network
 Policy iteration
 
 #### solved using off-policy DQN:
-![]()
+![](https://github.com/Stevenhunter167/cartpole/blob/master/DQN/image.png?raw=true)
 
 #### solved using policy iteration:
 * reinforcement learning algorithm: approximate policy iteration
