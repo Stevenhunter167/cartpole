@@ -8,15 +8,7 @@ DQN: deep Q network
 Policy iteration
 
 #### solved using off-policy DQN:
-## optimize using bellman equation: $Q(s,a)=r + \gamma \underset{a'\sim A}{max} Q(s',a')$
-## optimal form $ q(s,a;\theta^*)= E[Q(s,a)]$
-
-## vanilla DQN algorithm pseudocode
-## init Q network: $q(s,a;\theta_1)$
-## init target Q network: $q(s',a';\theta_2), \theta_2 = \theta_1$
-## for every state transition: $Loss=\frac{1}{N}\sum \bigg(J(q(s,a; \theta_1), (r + \gamma \underset{a'\sim A}{max} q(s',a';\theta_2)(1-done))\bigg)$
-## $\theta_1 \leftarrow Optimize(Loss, \theta_1)$
-## every once in a while: $\theta_2 \leftarrow \theta_1$
+![]()
 
 #### solved using policy iteration:
 * reinforcement learning algorithm: approximate policy iteration
