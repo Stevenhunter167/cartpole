@@ -1,18 +1,24 @@
 # gym.cartpole-v0
 
 #### Project Structure:
-solved model (saved) using tensorflow: 200.model
 
-main routine: experiment.ipynb
+#### Implementations
 
-random initialization data: g50.txt
+DQN: deep Q network
+Policy iteration
 
-agent: learner.py
+#### solved using off-policy DQN:
+## optimize using bellman equation: $Q(s,a)=r + \gamma \underset{a'\sim A}{max} Q(s',a')$
+## optimal form $ q(s,a;\theta^*)= E[Q(s,a)]$
 
-helper functions: util.py
+## vanilla DQN algorithm pseudocode
+## init Q network: $q(s,a;\theta_1)$
+## init target Q network: $q(s',a';\theta_2), \theta_2 = \theta_1$
+## for every state transition: $Loss=\frac{1}{N}\sum \bigg(J(q(s,a; \theta_1), (r + \gamma \underset{a'\sim A}{max} q(s',a';\theta_2)(1-done))\bigg)$
+## $\theta_1 \leftarrow Optimize(Loss, \theta_1)$
+## every once in a while: $\theta_2 \leftarrow \theta_1$
 
-
-#### solved using:
+#### solved using policy iteration:
 * reinforcement learning algorithm: approximate policy iteration
 * deep neural network: input(4)-dense(128)-drop(0.8)-dense(256)-drop(0.8)-dense(512)-drop(0.8)-dense(256)-drop(0.8)-dense(128)-softmax(2), opt=adam, lr=1e-3
 
