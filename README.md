@@ -7,6 +7,7 @@
 3. Policy iteration
 
 #### 1 solved using policy gradient:
+Maximize the total discounted return at each time step
 ![](https://github.com/Stevenhunter167/cartpole/blob/master/Policy%20Gradient/PG.png?raw=true)
 
 src: https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#part-3-intro-to-policy-optimization
