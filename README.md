@@ -7,6 +7,20 @@
 DQN: deep Q network
 Policy iteration
 
+#### solved using policy gradient
+![](https://github.com/Stevenhunter167/cartpole/blob/master/Policy%20Gradient/PG.png?raw=true)
+```python
+# training algorithm: policy gradient
+def train(self, obs, actions, reward):
+        """ optimize using policy gradient """
+        self.optim.zero_grad()
+        probs = torch.squeeze(torch.gather(self.Pnet(obs), 1, torch.unsqueeze(actions.long(), dim=1)))
+        J = (torch.sum(torch.mul(torch.neg(torch.log(probs)), reward)))
+        J.backward()
+        self.optim.step()
+        return J.item()
+```
+
 #### solved using off-policy DQN:
 ![](https://github.com/Stevenhunter167/cartpole/blob/master/DQN/image.png?raw=true)
 
