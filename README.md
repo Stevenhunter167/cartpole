@@ -1,14 +1,15 @@
-# gym.cartpole-v0
-
-#### Project Structure:
+# Solving Cartpole Environment using Reinforcement Learning
 
 #### Implementations
 
-DQN: deep Q network
-Policy iteration
+1. Policy Gradient
+2. DQN: deep Q network
+3. Policy iteration
 
-#### solved using policy gradient
+#### 1 solved using policy gradient:
 ![](https://github.com/Stevenhunter167/cartpole/blob/master/Policy%20Gradient/PG.png?raw=true)
+
+src: https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#part-3-intro-to-policy-optimization
 ```python
 # training algorithm: policy gradient
 def train(self, obs, actions, reward):
@@ -21,10 +22,10 @@ def train(self, obs, actions, reward):
         return J.item()
 ```
 
-#### solved using off-policy DQN:
+#### 2 solved using off-policy DQN:
 ![](https://github.com/Stevenhunter167/cartpole/blob/master/DQN/image.png?raw=true)
 
-#### solved using policy iteration:
+#### 3 solved using policy iteration:
 * reinforcement learning algorithm: approximate policy iteration
 * deep neural network: input(4)-dense(128)-drop(0.8)-dense(256)-drop(0.8)-dense(512)-drop(0.8)-dense(256)-drop(0.8)-dense(128)-softmax(2), opt=adam, lr=1e-3
 
